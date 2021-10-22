@@ -10,10 +10,10 @@ spec:
   # clusters, e.g. ephemeral vs target vs tenant
   kubernetes:
     controlPlaneEndpoint:
-      host: "10.23.25.102"
-    apiserverCertSANs: "[10.23.25.102, 10.23.24.102]"
+      host: "10.23.25.180"
+    apiserverCertSANs: "[10.23.25.180, 10.23.24.102]"
 
   ironic:
-    provisioningIp: "10.23.24.102"
+    provisioningIp: "10.23.24.190"
     dhcpRange: "10.23.24.200,10.23.24.250"
     ironicAutomatedClean: true

@@ -110,19 +110,19 @@ phases:
   # and find ConfigMap with name kubectl-get-pods
   - name: kubectl-get-pods-target
   # Deploy worker node
-  - name: workers-target
-  # Waiting for node to be provisioned
-  # Scripts for this phase placed in manifests/function/phase-helpers/wait_label_node/
-  # To get ConfigMap for this phase, execute `airshipctl phase render --source config -k ConfigMap`
-  # and find ConfigMap with name kubectl-wait-label-node
-  - name: kubectl-wait-label-node-target
-  # Deploy workload
-  - name: workload-target
-  # Ensure we can reach ingress controller default backend
-  # Scripts for this phase placed in manifests/function/phase-helpers/check_ingress_ctrl/
-  # To get ConfigMap for this phase, execute `airshipctl phase render --source config -k ConfigMap`
-  # and find ConfigMap with name kubectl-check-ingress-ctrl
-  - name: kubectl-check-ingress-ctrl-target
+  # - name: workers-target
+  # # Waiting for node to be provisioned
+  # # Scripts for this phase placed in manifests/function/phase-helpers/wait_label_node/
+  # # To get ConfigMap for this phase, execute `airshipctl phase render --source config -k ConfigMap`
+  # # and find ConfigMap with name kubectl-wait-label-node
+  # - name: kubectl-wait-label-node-target
+  # # Deploy workload
+  # - name: workload-target
+  # # Ensure we can reach ingress controller default backend
+  # # Scripts for this phase placed in manifests/function/phase-helpers/check_ingress_ctrl/
+  # # To get ConfigMap for this phase, execute `airshipctl phase render --source config -k ConfigMap`
+  # # and find ConfigMap with name kubectl-check-ingress-ctrl
+  # - name: kubectl-check-ingress-ctrl-target
 validation:
   kindsToSkip:
     - Clusterctl
