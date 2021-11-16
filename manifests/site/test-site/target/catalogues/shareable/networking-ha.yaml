@@ -1,0 +1,10 @@
+apiVersion: airshipit.org/v1alpha1
+kind: VariableCatalogue
+metadata:
+  name: networking-ha
+  labels:
+    airshipit.org/deploy-k8s: "false"
+vrrp:
+  kubernetes:
+    interface: oam
+    virtual_ipaddress: 10.23.25.180

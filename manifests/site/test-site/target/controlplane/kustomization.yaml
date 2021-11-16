@@ -9,6 +9,9 @@ resources:
 
 namespace: target-infra
 
+patchesStrategicMerge:
+  - patch_controlplane.yaml
+
 commonLabels:
   airshipit.org/stage: initinfra
 

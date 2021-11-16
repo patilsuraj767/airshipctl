@@ -87,6 +87,8 @@ template: |
   apiVersion: v1
   kind: Secret
   metadata:
+    labels:
+      clusterctl.cluster.x-k8s.io/move: "true"
     name: {{ $hostName }}-network-data
   stringData:
     networkData: |

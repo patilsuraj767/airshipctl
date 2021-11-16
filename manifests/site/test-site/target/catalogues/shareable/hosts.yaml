@@ -54,9 +54,9 @@ hosts:
         pxe: 52:54:00:b6:ed:23
       hardwareProfile: default # defined in the hardwareprofile-example function
     node04:
-      bootMode: UEFI
+      bootMode: legacy
       macAddress: 52:54:00:36:5e:e3
-      bmcAddress: redfish+http://10.23.25.2:8000/redfish/v1/Systems/air-target-2
+      bmcAddress: redfish+http://10.23.25.1:8000/redfish/v1/Systems/air-target-2
       bmcUsername: username
       bmcPassword: password
       ipAddresses:
@@ -64,5 +64,47 @@ hosts:
         pxe-ipv4: 10.23.24.104
       macAddresses:
         oam: 52:54:00:dc:ab:04
-        pxe: 52:54:00:51:0b:e4
+        pxe: 52:54:00:36:5e:e3
       hardwareProfile: default # defined in the hardwareprofile-example function
+    node05:
+      bootMode: legacy
+      macAddress: 52:56:00:b6:ed:23
+      bmcAddress: redfish+http://10.23.25.1:8000/redfish/v1/Systems/air-target-3
+      bmcUsername: username
+      bmcPassword: password
+      disableCertificateVerification: false
+      ipAddresses:
+        oam-ipv4: 10.23.25.105
+        pxe-ipv4: 10.23.24.105
+      macAddresses:
+        oam: 52:56:00:9b:27:07
+        pxe: 52:56:00:b6:ed:23
+      hardwareProfile: default
+    node06:
+      bootMode: legacy
+      macAddress: 52:57:00:b6:ed:23
+      bmcAddress: redfish+http://10.23.25.1:8000/redfish/v1/Systems/air-worker-2
+      bmcUsername: username
+      bmcPassword: password
+      disableCertificateVerification: false
+      ipAddresses:
+        oam-ipv4: 10.23.25.106
+        pxe-ipv4: 10.23.24.106
+      macAddresses:
+        oam: 52:57:00:9b:27:07
+        pxe: 52:57:00:b6:ed:23
+      hardwareProfile: default
+    node07:
+      bootMode: legacy
+      macAddress: 52:58:00:b6:ed:23
+      bmcAddress: redfish+http://10.23.25.1:8000/redfish/v1/Systems/air-worker-3
+      bmcUsername: username
+      bmcPassword: password
+      disableCertificateVerification: false
+      ipAddresses:
+        oam-ipv4: 10.23.25.107
+        pxe-ipv4: 10.23.24.107
+      macAddresses:
+        oam: 52:58:00:9b:27:07
+        pxe: 52:58:00:b6:ed:23
+      hardwareProfile: default

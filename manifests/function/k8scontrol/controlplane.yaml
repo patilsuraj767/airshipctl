@@ -98,6 +98,7 @@ kind: Metal3MachineTemplate
 metadata:
   name: cluster-controlplane
 spec:
+  nodeReuse: true
   template:
     spec:
       image:

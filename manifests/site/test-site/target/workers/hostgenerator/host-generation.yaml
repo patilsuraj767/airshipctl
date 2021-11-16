@@ -8,3 +8,5 @@ metadata:
 hosts:
   m3:
     - node03
+    - node06
+    - node07
